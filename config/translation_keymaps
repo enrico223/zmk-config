@@ -1,0 +1,95 @@
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    [0] = LAYOUT_split_3x6_3(
+       &kp ESC    &kp Q    &kp W    &kp E    &kp R    &kp T                         &kp Y    &kp U    &kp I    &kp O   &kp P  &kp MINS
+      &kp LCTL    &kp A    &kp S    &kp D    &kp F    &kp G                         &kp H    LALT_T(&kp J)    &kp K  &kp L &mt LGUI SCLN &mt LCTRL &kp QUOT
+      &kp LSHFT    &kp Z    &kp X    &kp C    &kp V    &kp B                         &kp N    &kp M &kp COMM  &kp DOT &kp SLSH  &mt RSFT TAB)
+                                          &kp LGUI   MO(1)  &kp SPACE     &kp BSPC   MO(2) &kp ENT
+  )
+
+    [1] = LAYOUT_split_3x6_3(
+  //-----------------------------------------------------.                    -----------------------------------------------------.
+       &kp TAB &kp EXLM   &kp AT &kp HASH  &kp DLR &kp PERC                      &kp CIRC &kp AMPR &kp ASTR &kp LPRN &kp RPRN &kp BSPC
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      &kp LCTL LSG(&kp 1) LSG(&kp 2) LSG(&kp 3) LSG(&kp 4) LSG(&kp 5)            &kp MINS  &kp EQL &kp LBRC &kp RBRC &kp BSLS  &kp GRV
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      &kp CAPS LSG(&kp 6) LSG(&kp 7) LSG(&kp 8) LSG(&kp 9) LSG(&kp 0)            &kp UNDS &kp PLUS &kp LCBR &kp RCBR &kp PIPE &kp TILD
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          &kp LGUI &trans  &kp SPACE     &kp BSPC MO(3) &kp ENT
+                                      //`--------------------------'  `--------------------------'
+  )
+
+    [2] = LAYOUT_split_3x6_3(
+  //-----------------------------------------------------.                    -----------------------------------------------------.
+       &kp TAB    &kp 1    &kp 2    &kp 3    &kp 4    &kp 5                     &kp 6    &kp 7    &kp 8    &kp 9    &kp 0 &kp BSPC
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      &kp LCTL RALT(&kp GRV) &kp TRNS &kp TRNS &kp TRNS &kp TRNS                &kp LEFT &kp DOWN   &kp UP&kp RIGHT &kp TRNS &kp TRNS
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      &kp LSHFT &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                               &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+  //|--------+--------+--------g--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          &kp LGUI MO(3)   &kp SPACE     &kp ENT &kp TRNS  &kp BSPC
+                                      //`--------------------------'  `--------------------------
+  )
+
+    [3] = LAYOUT_split_3x6_3(
+  //-----------------------------------------------------.                    -----------------------------------------------------.
+        QK_BOOT &trans &trans &kp MPLY &trans &kp VOLU                      &kp BRIU &trans &trans &trans &trans &trans
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      RGB_TOG RGB_HUI RGB_SAI RGB_VAI &trans &kp VOLD                      &kp BRID &trans &trans &trans &trans &trans
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      RGB_MOD RGB_HUD RGB_SAD RGB_VAD &trans &trans                      &trans &trans &trans &trans &trans &trans
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          &kp LGUI &trans  &kp SPACE     &kp ENT &trans &kp RALT
+                                      //`--------------------------'  `--------------------------'
+  )
+};
+
+// -----------------------------------------------------------------------------------------
+// | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | BKSP | RSE  | ALT |
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                        >;
+                };
+                lower_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                        >;
+                };
+
+                lower_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
+
+				adjust_layer {
+				bindings = < 
+	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans				
+	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	
+	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	&trans	
+				&trans	&trans	&trans	&trans	&trans	&trans	&trans	
+				>;
+				};
+        };
+};
