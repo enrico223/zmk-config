@@ -28,7 +28,7 @@
 &kp TAB    &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT         &kp CARET   &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp DELETE
 &kp LCTRL  &kp RS(LG(N1))  &kp LG(RS(N2))  &kp LG(RS(N3))  &kp LG(RS(N4))  &kp LG(RS(N5))    &kp MINUS   &kp PLUS   &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp CAPS   &kp LG(RS(N6))  &kp LG(RS(N7))  &kp LG(RS(N8))  &kp LG(RS(N9))  &kp LG(RS(N0))    &kp UNDER   &kp EQUAL  &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                           &kp LGUI        &trans          &kp SPACE         &kp DELETE  &mo 3      &kp RALT
+                                           &kp LGUI        &trans          &kp SPACE         &kp BSPC    &mo 3      &kp RALT
             >;
         };
 
