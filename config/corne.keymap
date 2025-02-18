@@ -10,7 +10,7 @@
 
 &mt { tapping-term-ms = <350>; };
 
-/ {
+/  {
     behaviors {
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -21,7 +21,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
- {
+ 
     keymap {
         compatible = "zmk,keymap";
 
