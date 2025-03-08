@@ -54,8 +54,8 @@
 
         adjust_layer {
             bindings = <
-&trans     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans             &kp C_BRI_UP  &kp PG_UP  &trans        &trans     &trans  &trans
-&trans     &trans      &trans        &kp C_BRI_UP  &kp PG_UP     &kp C_VOLUME_UP    &kp LEFT      &kp DOWN   &kp UP        &kp RIGHT  &trans  &trans
+&trans     &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans             &kp C_BRI_UP  &kp PG_UP  &trans        &trans     &trans  &trans
+&trans     &trans      &bt BT_CLR        &kp C_BRI_UP  &kp PG_UP     &kp C_VOLUME_UP    &kp LEFT      &kp DOWN   &kp UP        &kp RIGHT  &trans  &trans
 &kp LSHFT  &trans      &trans        &kp C_BRI_DN  &kp PG_DN     &kp C_VOL_DN       &trans        &trans     &kp C_BRI_DN  &kp PG_DN  &trans  &trans
                                      &trans        &trans        &kp LGUI           &trans        &kp SPACE  &kp RET
             >;
